@@ -20,7 +20,7 @@ const RepoList = ({
     let parsedData = await data.json();
 
     //若資料長度小於10，代表已經沒有更多的資料，則要把moreRepo的狀態設為false
-    //當網頁拉至最底時，顯示提示字元" You have seen it all"
+    //當網頁拉至最底時，顯示 You have seen it all" 之提示字元
     //下一次當網頁拉到底時，就不會再繼續呼叫fetchMoreData()
 
     if (parsedData < 10) {
