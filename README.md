@@ -20,12 +20,12 @@ npm start
 
 ### 程式架構
 
-1.
+(1)
 所有的 route 皆會實作在 App 主元件中，並渲染 Header.js. 
 
 在 "/" 時，渲染 Search.js ，可以讓使用者輸入欲查詢的 Github username
 
-2.
+(2)
 當按下搜尋鍵(Search Repo)，會 navigate 至 /users/{username}/repos. 
 
 並同時呼叫 getUserRepos() 將取得的資料存至 RepoData 
@@ -34,7 +34,7 @@ npm start
 
 RepoList 會將 RepoData 內的結果一個個渲染成Repo.js，顯示在畫面上. 
 
-3.
+(3)
 當網頁下拉至底時，若還有更多資料，則會呼叫 RepoList.js 中的 fetchMoreData()來取得新的10個repos  
 
 當取得的資料長度小於10，代表已經沒有更多資料，則將 moreRepo 設為 false 
