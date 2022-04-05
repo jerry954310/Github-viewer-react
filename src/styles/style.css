@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.repoItem {
+  border: 0.5px black solid;
+  margin: 1rem 2rem;
+}
+
+.repoItem .viewmore {
+  margin: 0.5rem 0rem;
+}
+
+.searchBar {
+  margin: 3rem;
+}
+
+.header {
+  background-color: black;
+}
+
+.header h1, .header p {
+  color: white;
+  text-align: center;
+  padding: 0.5rem 0rem;
+}
+
+.header span {
+  padding: 1rem;
+}
+
+.repoInfo {
+  margin: 1rem;
+}
+/*# sourceMappingURL=style.css.map */
