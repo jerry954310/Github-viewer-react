@@ -10,6 +10,7 @@ https://user-images.githubusercontent.com/96834013/161789061-a074ad0c-4cdb-4561-
 使用 npx crate-react-app
 
 ### 如何啟動
+npm i
 npm start
 
 ### 功能說明
