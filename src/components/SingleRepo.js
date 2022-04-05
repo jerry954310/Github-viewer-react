@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Button, Card } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Card } from "react-bootstrap";
 const SingleRepo = ({ userName, repoName }) => {
   const [repoInfo, setRepoInfo] = useState([]);
 
@@ -12,33 +11,22 @@ const SingleRepo = ({ userName, repoName }) => {
     setRepoInfo(parsedData);
   };
 
+  //載入頁面時呼叫 getRepoInfo() 來取得第一次 fetch 的資料
   useEffect(() => {
     getRepoInfo();
   }, []);
 
   return (
     <div>
-      {/* <Card style={{ width: "18rem" }}>
-        <Card.Body>
-          <Card.Title>{repoInfo.name}</Card.Title>
-          <Card.Subtitle className="mb-2 text-muted">{userName}</Card.Subtitle>
-          <Card.Text>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </Card.Text>
-          <Card.Link href={repoInfo.html_url} target="_blank">
-            View repo on Github
-          </Card.Link>
-        </Card.Body>
-      </Card> */}
       <Card className="text-center">
         <Card.Header>{repoInfo.name}</Card.Header>
         <Card.Body>
           <Card.Text>
             {repoInfo.stargazers_count} stars
+            <br />
             {repoInfo.description}
           </Card.Text>
-          <a href={repoInfo.html_url} target="_blank">
+          <a href={repoInfo.html_url} target="_blank" rel="noreferrer">
             view repository on Github
           </a>
         </Card.Body>

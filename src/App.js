@@ -1,11 +1,10 @@
 import React, { Fragment, useState } from "react";
 import Search from "./components/Search";
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./styles/style.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "./components/Header";
 import RepoList from "./components/RepoList";
-import Errorpage from "./components/ErrorPage";
 import SingleRepo from "./components/SingleRepo";
 
 const App = () => {
@@ -13,7 +12,11 @@ const App = () => {
   const [userName, setUserName] = useState("");
   const [repoData, setRepoData] = useState([]);
   const [repoName, setRepoName] = useState("");
+  const [currentPage, setCurrentPage] = useState(1);
+  const [moreRepo, setMoreRepo] = useState(true);
+
   return (
+    //在 App component 實作 Route
     <Router>
       <Fragment>
         <Header user={user} />
@@ -28,6 +31,8 @@ const App = () => {
                 setRepoData={setRepoData}
                 userName={userName}
                 repoData={repoData}
+                currentPage={currentPage}
+                setMoreRepo={setMoreRepo}
               />
             }
           ></Route>
@@ -38,6 +43,11 @@ const App = () => {
                 repoData={repoData}
                 userName={userName}
                 setRepoName={setRepoName}
+                setRepoData={setRepoData}
+                currentPage={currentPage}
+                setCurrentPage={setCurrentPage}
+                moreRepo={moreRepo}
+                setMoreRepo={setMoreRepo}
               />
             }
           ></Route>
