@@ -40,10 +40,13 @@ npm start
 
 當路徑為 "/users/{username}/repos" 時，渲染 RepoList.js  
 
-RepoList 會將 RepoData 內的結果一個個渲染成Repo.js，顯示在畫面上. 
+RepoList 會將 RepoData 內的結果一個個渲染成Repo.js，顯示在畫面上
+
 
 (3)
-當網頁下拉至底時，若還有更多資料，則會呼叫 RepoList.js 中的 fetchMoreData()來取得新的10個repos  
+當網頁下拉至底時，若還有更多資料，
+
+則會呼叫 RepoList.js 中的 fetchMoreData()來取得新的10個repos  
 
 當取得的資料長度小於10，代表已經沒有更多資料，則將 moreRepo 設為 false 
 
