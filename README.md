@@ -51,5 +51,10 @@ RepoList 會將 RepoData 內的結果一個個渲染成Repo.js，顯示在畫面
 
 表示網頁已經到底，同時顯示 "You have seen it all"
 
+(4)
+在 Repo.js 上點擊 view more按鈕時
+會 route 至 /users/{username}/repos/{repo}. 
+跳轉至獨立 repo 分頁
+
 
 
